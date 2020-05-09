@@ -10,7 +10,7 @@ html,body{
 }
 
 .general-container{
-    background: url('img/bg-lightl-904.jpg');
+    background: url('../img/bg-lightl-904.jpg');
     height: 100%;
 }
 

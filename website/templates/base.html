@@ -13,37 +13,23 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet"  href="{% static 'landing.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/style.css' %}">
 
 
 
 
   </head>
   <body>
-    <div class=" general-container">
-        <div class="container top-container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 " >
-                    <h1 class="title">Наш магазин скоро откроется!<br>
-                     Оставляте ваш email в форме ниже</h1>
+       <div class="wrapper">
+        <div class="wrapper-content">
+            {% include 'navbar.html' %}
 
-                    <div>
-                        <form action="" method="post" class="form-inline text-center " >{% csrf_token %}
-                            <div class="form-group">
-                                <label>Ваш имейл:  </label>
-                                <input  name="{{form.email.name}}" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Ваше имя:  </label>
-                                <input  name="{{form.name.name}}" class="form-control">
-                            </div>
-                            <button type="submit"class="btn btn-primary btn-orange" >Отправить</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            {% block content %}
+            {% endblock content %}
         </div>
+
     </div>
+       {% include 'footer.html' %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
