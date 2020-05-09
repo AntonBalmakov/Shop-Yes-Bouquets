@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'Yes_bouquets',
     'bootstrap4',
+    'products',
+    'orders',
 
 ]
 
