@@ -1,17 +1,31 @@
 from django.db import models
 
 
-class Product(models.Model):
+class ProductCategory(models.Model):
     name = models.CharField(max_length=64, blank=True, null=True, default=None)
-    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    short_description = models.TextField(blank=True, null=True, default=None)
-    description = models.TextField(blank=True, null=True, default=None)
     is_active = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True, auto_now=False)
-    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
-        return "%s %s" % (self.price, self.name)
+        return "%s " % self.name   # вывод цены и имени
+
+    class Meta:
+        verbose_name = 'Категория товара'
+        verbose_name_plural = 'Категория товаров'
+
+
+class Product(models.Model):
+    name = models.CharField(max_length=64, blank=True, null=True, default=None)# имя
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0) #цена
+    discount = models.IntegerField(default=0,) #скидка на товар
+    category = models.ForeignKey(ProductCategory, blank=True, null=True, default=None, on_delete=models.CASCADE)#тип товара
+    short_description = models.TextField(blank=True, null=True, default=None) #красткое описание
+    description = models.TextField(blank=True, null=True, default=None)# описание
+    is_active = models.BooleanField(default=True)# активация
+    created = models.DateTimeField(auto_now_add=True, auto_now=False)# создание
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)#обновление
+
+    def __str__(self):
+        return "%s %s" % (self.price, self.name)# вывод цены и имени
 
     class Meta:
         verbose_name = 'Товар'

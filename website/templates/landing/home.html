@@ -1,39 +1,58 @@
 {%extends 'base.html'%}
 {% load static %}
-
+{% load bootstrap4 %}
 
 {%block content%}
 <div class="section-top">
         <img src="{% static 'img/greenlist.jpg' %}" class="img-fluid">
     </div>
-    <div class="section">
+    <div class="section section1">
         <div class="container">
             <div class="row">
-
-                {% for product_image in products_images %}
-
-                    <div class="col-lg-3">
-                        <div class="product-item">
-                            <div>
-                                <img src="{{product_image.image.url}}" class="img-fluid">
-                            </div>
-                            <h4>{{ product_image.product.name }}</h4>
-                            <p>
-                                {{ product_image.product.description|truncatechars_html:70 }}
-                            </p>
-                            <div>
-                                {{ product_image.product.price }} Бел.р.
-                            </div>
-                            <div class="add-to-card-btn">
-                                <button class="btn btn-success">
-                                    Добавить в корзину
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Популярные
+                    </h1>
+                </div>
+                {% for product_image in products_images_popular %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="section section-delivery">
+        <div>
+            <h3>Доставка в Минске по лини метро бесплатная<br>
+                Самовывоз Каменная горка </h3>
+        </div>
+    </div>
+     <div class="section section2 men-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Для мужика
+                    </h1>
+                </div>
+                {% for product_image in products_images_popular %}
+                    {% include 'landing/product_item.html' %}
                 {% endfor %}
 
+            </div>
+        </div>
+    </div>
+
+     <div class="section section3 different-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Разные
+                    </h1>
+                </div>
+                {% for product_image in products_images_popular %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor %}
             </div>
         </div>
     </div>

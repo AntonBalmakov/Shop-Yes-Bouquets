@@ -6,9 +6,32 @@ html,body{
     background-color:#edeef0;
 }
 
+.navbar{
+    margin-bottom:0;
+}
+.wrapper{
+    min-height: 100px;
+}
+.wrapper-content{
+    overflow: auto;
+    padding-bottom: 180px;
+
+}
+.footer{
+    position: relative;
+    margin-top: -180px;
+    height: 180px;
+    clear: both;
+    background-color: white;
+
+}
 
 .section-top{
-  margin:20px;
+  margin-bottom:20px;
+}
+
+.section h1{
+    margin-bottom: 40px;
 }
 
 .product-item{
@@ -16,14 +39,39 @@ html,body{
     background-color: white;
     border: 1px solid lightgrey;
     position: relative;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     margin-bottom: 10px;
-
 }
 
 .add-to-card-btn{
     position: absolute;
     bottom: 15px;
     left:15%;
+}
+.discount-container{
+    position: absolute;
+    top: 10%;
+    background: #55e073;
+    width: 25%;
+    color: white;
+    font-weight: 700;
+    padding: 3px;
+}
+
+.section-delivery{
+    height: 300px;
+    background-color:#55e073;
+    text-align: center;
+    color: white;
+}
+
+.product-description-tabs{
+    padding: 15px;
+
+}
+
+.product-image-item{
+    padding: 5px;
+    margin-bottom: 5px;
 }

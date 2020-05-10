@@ -6,6 +6,6 @@ name_apps = 'Yes_bouquets'
 
 urlpatterns = [
 
-    #path('landing/', landing_view, name='landing')
+    path(r'^product/(?P<product_id>\w+)/$', product, name='product')
 
 ]

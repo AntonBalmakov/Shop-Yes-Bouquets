@@ -17,5 +17,9 @@ def landing_view(request):
 
 
 def home(request):
-    products_images = ProductImage.objects.filter(is_active=True, is_main=True)
+    products_images = ProductImage.objects.filter(is_active=True, is_main=True, product__is_active=True)
+
+    products_images_men = products_images.filter(product__category__id=1)
+    products_images_different = products_images.filter(product__category__id=2)
+    products_images_popular = products_images.filter(product__category__id=3)
     return render(request, 'landing/home.html', locals())
