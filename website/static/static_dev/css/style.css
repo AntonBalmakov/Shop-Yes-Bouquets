@@ -75,3 +75,9 @@ html,body{
     padding: 5px;
     margin-bottom: 5px;
 }
+
+.navbar-top{
+    min-height: 50px;
+    height: 20px;
+    background-color: green;
+}

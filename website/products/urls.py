@@ -6,6 +6,6 @@ name_apps = 'Yes_bouquets'
 
 urlpatterns = [
 
-    path(r'^product/(?P<product_id>\w+)/$', product, name='product')
+    path(r'product/<product_id>', product, name='product')
 
 ]
