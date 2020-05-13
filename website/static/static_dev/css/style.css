@@ -77,7 +77,23 @@ html,body{
 }
 
 .navbar-top{
-    min-height: 50px;
+    min-height: 10px;
     height: 20px;
-    background-color: green;
+    background-color: gainsboro;
+    border: none;
+}
+
+.basket-container{
+    position: relative;
+    width: 400px;
+    padding: 15px 10px;
+}
+
+.basket-items{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: 10;
+    padding: 10px;
+    background-color: gainsboro;
 }

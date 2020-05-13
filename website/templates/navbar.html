@@ -1,8 +1,8 @@
 {% load bootstrap4 %}
 <nav class="navbar navbar-expand-lg navbar-top">
-  ccd 24.22/////////////////////////////////////
+  ccd
 </nav>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-main bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -31,9 +31,17 @@
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <ul class="navbar-nav navbar-right">
+      <li>
+        <div class="basket-container">
+            <a href="">Корзина <span id="basket_total_nmb"> </span></a>
+            <div class="basket-items d-none">
+              <ul class="">
+                <li>hello</li>
+              </ul>
+            </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </nav>
