@@ -33,6 +33,13 @@ $(document).ready(function () {
                     console.log(data.products_total_nmb);
                     if (data.products_total_nmb){
                        $('#basket_total_nmb').text("("+data.products_total_nmb+")");
+                       console.log(data.products);
+                       $('.basket-items ul').html("");
+                       $.each(data.products, function (k, v) {
+                           $('.basket-items ul').append('<li>'+v.name+', ' + v.nmb + '-шт.' + ' по цене ' + v.price_per_item + ' бел.р.' +
+                                // '<a class="delete-item" href="#">X</a>'+
+                                '</li>');
+                       });
                     }
 
                 },
@@ -41,9 +48,7 @@ $(document).ready(function () {
                 }
             })
 
-        $('.basket-items ul').append('<li>'+product_name+', ' + nmb + '-шт.' + ' по цене ' + product_price + ' бел.р.  ' +
-            '<a class="delete-item" href="#">X</a>'+
-            '</li>');
+
     })
 
     function showBasket(){
