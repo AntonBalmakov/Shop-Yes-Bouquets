@@ -97,3 +97,7 @@ html,body{
     padding: 10px;
     background-color: gainsboro;
 }
+
+.form-error{
+     color: red;
+}
